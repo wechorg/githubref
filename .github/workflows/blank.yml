@@ -28,13 +28,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Echo environment variables
-        run: echo $tag_ref
-      
-      - name: replace substring
-        run: echo ${tag_ref:4}
+        run: echo $tag_ref     
+  
       
       - name: replace substring2
-        run: echo "TAGNAME=$(echo ${tag_ref:4})" >> $GITHUB_ENV
+        run: echo "TAGNAME=$(echo ${tag_ref:11})" >> $GITHUB_ENV
 
       # Runs a set of commands using the runners shell
       - name: Echo another
