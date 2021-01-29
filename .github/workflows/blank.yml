@@ -34,9 +34,9 @@ jobs:
         run: echo ${tag_ref:4}
       
       - name: replace substring2
-        run: MYREF = ${tag_ref:4}
+        run: echo "TAGNAME=$(echo ${tag_ref:4})" >> $GITHUB_ENV
 
       # Runs a set of commands using the runners shell
       - name: Echo another
-        run: echo ${MYREF}
+        run: echo $TAGNAME
         
