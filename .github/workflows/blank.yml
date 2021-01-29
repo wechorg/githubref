@@ -32,7 +32,7 @@ jobs:
   
       
       - name: replace substring2
-        run: echo "TAGNAME=$(echo ${tag_ref:11})" >> $GITHUB_ENV
+        run: echo "TAGNAME=$(echo ${tag_ref:10})" >> $GITHUB_ENV
 
       # Runs a set of commands using the runners shell
       - name: Echo another
